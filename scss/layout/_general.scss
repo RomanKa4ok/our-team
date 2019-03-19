@@ -1,0 +1,284 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+	transition: all .3s ease-in-out;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+html {
+	height: 100%;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+// sssssssssssssssssssssssssssssssssssssssssssssssssss
+
+body{
+	font: 14px/24px $font;
+	background: #fff;
+	color: #333333;
+	
+}
+.hidden {
+	display: none;
+}
+
+.container {
+	max-width: 1170px;
+	width: 100%;
+	display: flex;
+	margin-bottom: 40px;
+	position: relative;
+	
+}
+
+[class^="member"] {
+	max-width: 570px;
+	width: 100%;
+}
+
+.member-photo {
+	border-right: 1px solid $yellow;
+	display: flex;
+	justify-content: center;
+	padding-top: 75px;
+	padding-bottom: 65px;
+
+	&__img {
+		width: 386px;
+		height: 386px;
+		border: 1px solid $yellow;
+		background: #fff;
+	}
+
+	&__wrap {
+		
+		width: 420px;
+		height: 420px;
+		border: 1px solid $yellow;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+
+		&::before {
+			content: '';
+			width: 220px;
+			height: 1px;
+			background: #fff;
+			position: absolute;	
+			top: -1px;
+		}
+
+		&::after {
+			content: '';
+			width: 220px;
+			height: 1px;
+			background: #fff;
+			position: absolute;
+			bottom: -1px;
+		}
+	}
+	&__wrap--sideborders {
+		width: 420px;
+		height: 420px;
+		position: relative;
+		z-index: 1;
+
+
+
+		&::before {
+			content: '';
+			width: 1px;
+			height: 220px;
+			background: white;
+			position: absolute;	
+			left: 0;
+			top:100px; 
+			z-index: 1;
+		}
+
+		&::after {
+			content: '';
+			width: 1px;
+			height: 220px;
+			background: white;
+			position: absolute;
+			right: 0;
+			top:100px; 
+			z-index: 1;
+
+		}
+	}
+}
+
+.social {
+	margin-bottom: 30px;
+}
+
+
+.social__img
+{
+
+	margin-right: 5px;
+}
+.member-desc {
+
+	padding: 90px 83px 0 83px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+
+	&__name {
+		font: 36px/24px $roboto;
+		font-weight: 900;
+		color: #666666;
+		position: relative;
+		margin-bottom: 75px;
+
+		&::before {
+			content: '';
+			width: 100px;
+			height: 1px;
+			background: $yellow;
+			position: absolute;
+			bottom: -45px;
+			left: 150px;
+			
+
+		}
+	}
+
+	&__spec {
+		font: 24px/36px $font;
+		font-weight: 500;
+		color: #666666;
+		margin-bottom: 30px;
+	}
+
+	&__description {
+		color: #333333;
+		font: 14px/24px $font;
+		margin-bottom: 15px;
+	}
+	&__dotted {
+		width: 20px;
+		height: 4px;
+		background: $yellow;
+		position: relative;
+		margin-bottom: 25px;
+
+
+		&::before {
+			content: '';
+			width: 10px;
+			height: 4px;
+			background: $yellow;
+			position: absolute;
+			left: -20px;
+		}
+		&::after {
+			content: '';
+			width: 10px;
+			height: 4px;
+			background: $yellow;
+			position: absolute;
+			right: -20px;	
+		}
+	}
+
+
+	&__button {
+		color: #666666;
+		width: 120px;
+		height: 24px;
+		font: 14px/24px $openS;
+		font-weight: 700;
+		background: #FFF;
+		border: 1px solid $yellow;
+		&:hover {
+			color: #fff;
+			background: $yellow;
+			cursor: pointer;
+		}
+	}
+}
+.footer {
+	display: flex;
+	justify-content: center;
+}
+
+.slider-buttons {
+	width: 10%;
+	text-align: center;
+		&__item {
+			font-size: 50px;
+			color: $yellow;
+			cursor: pointer;
+		}
+		&__item--active {
+		  text-shadow:
+		  -1px -1px 0 $yellow,  
+  		  1px -1px 0 $yellow,
+   		 -1px 1px 0 $yellow,
+    	 1px 1px 0 $yellow;
+			color: #fff;
+		}
+}
+
+.slider1 {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+
+
+}
+
+
+.slider2 {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 50%;
+	right: 0;
+}
+
+.fas::before {
+  	color: $yellow;
+  	font-size: 35px;
+  	font-weight: 700;
+  	cursor: pointer;
+}
+
+.fas:hover:before {
+  	color: white;
+  	text-shadow: 
+  	 -1px -1px 0 $yellow,  
+  	  1px -1px 0 $yellow,
+   	 -1px 1px 0 $yellow,
+     1px 1px 0 $yellow;
+     transition: all .3s;
+  }
+  
